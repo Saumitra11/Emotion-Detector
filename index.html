@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion Detector</title>
+    <script defer src="face-api.min.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+      * {
+        border: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Montserrat", sans-serif;
+      }
+      canvas {
+        position: absolute;
+      }
+      #top {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        max-height: 100px;
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+      #top h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 3rem;
+      }
+
+      #bottom {
+        width: 100%;
+        min-height: 40px;
+        background-color: black;
+        color: white;
+        position: absolute;
+        bottom: 0;
+      }
+      #bottom h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+      }
+      @media only screen and (max-width: 720px) {
+        body {
+          margin: 0;
+          padding: 0;
+          width: 90vw;
+          height: 90vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-family: "Montserrat", sans-serif;
+        }
+        #top,
+        #bottom {
+          width: 100%;
+          max-height: 70px;
+        }
+        #top h1,
+        #bottom h2 {
+          font-size: 1.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="top">
+      <h1>Free AI Motion Detector</h1>
+    </section>
+    <video id="video" width="720" height="560" autoplay muted></video>
+    <section id="bottom">
+      <h2>&copy by Saumitra Pathak</h2>
+    </section>
+  </body>
+</html>
